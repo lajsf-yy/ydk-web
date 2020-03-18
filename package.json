@@ -1,8 +1,8 @@
 {
-  "name": "nutritionplan-web",
-  "version": "v1.2",
+  "name": "ydk-web",
+  "version": "0.1.0",
   "license": "ISC",
-  "description": "test",
+  "description": "ydk-web component",
   "private": true,
   "dependencies": {
     "@types/classnames": "^2.2.9",
