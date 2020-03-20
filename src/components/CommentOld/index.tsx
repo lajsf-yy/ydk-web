@@ -3,7 +3,6 @@ import './comment.css'
 import avator from '../../assets/image/avatar.png'
 import { transformTime } from '../../utils/time'
 const CommentModule: PageComponent = props => {
-
     const giveLike = () => {
         props.openAppGive()
     }
@@ -15,14 +14,6 @@ const CommentModule: PageComponent = props => {
             setDataList(props.dataList)
         }
     },[]);
-    // 处理评论是时间格式
-    // const timeFormatTxt = (val:string) => {
-    //     if (val.length<=0) return
-    //     var year = (val.split(' ')[0]).slice(5)
-    //     var daytime = (val.split(' ')[1]).slice(0,5)
-    //     var result = year + ' ' + daytime
-    //     return result
-    // }
 
     return (
         <div className="comment-wrap">
@@ -54,25 +45,6 @@ const CommentModule: PageComponent = props => {
                                         {transformTime(item.createDate,false)}
                                         <span className="hui">回复</span>
                                     </div>
-                                    {/*回复部分*/}
-                                    {/*{*/}
-                                        {/*item.subs.length <= 0 ? '' :*/}
-                                            {/*item.subs.map((subItem:any, subIndex:number) => (*/}
-                                                {/*<div className="reply" key={subIndex}>*/}
-                                                    {/*<div className="reply-user">*/}
-                                                        {/*<div className="reply-user-name">{!subItem.creator ? '' : (subItem.creator.userNickName || '')}</div>*/}
-                                                        {/*/!*<div className="reply-user-give" onClick={giveLike}>*!/*/}
-                                                            {/*/!*<span className="give-num">0</span>*!/*/}
-                                                            {/*/!*<img className="article-img" src={require("../../assets/image/zan-icon@2x.png")} alt=""/>*!/*/}
-                                                        {/*/!*</div>*!/*/}
-                                                    {/*</div>*/}
-                                                    {/*<div className="info-txt">*/}
-                                                        {/*<div className="txt-sp">{subItem.content}</div>*/}
-                                                        {/*<div className="txt-ri-empty"></div>*/}
-                                                    {/*</div>*/}
-                                                {/*</div>*/}
-                                            {/*))*/}
-                                    {/*}*/}
                                 </div>
                             </div>
                         )) :

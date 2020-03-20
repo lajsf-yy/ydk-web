@@ -2,12 +2,10 @@ import React, { useState, useEffect, useRef } from 'react'
 import './comment.css'
 import avator from '../../assets/image/avatar.png'
 import { transformTime } from '../../utils/time'
-
 const CommentModule: PageComponent = props => {
 	const giveLike = () => {
 		props.openAppGive()
 	}
-	console.log('pros - - : ', props)
 	// 获取传进来的列表数据
 	let [dataList, setDataList] = useState([]);   // 显示弹窗
 	const [showMoreList, setShowMoreList] = useState(false);   // 一级评论最多三条，是否展示更多
@@ -34,8 +32,6 @@ const CommentModule: PageComponent = props => {
 				setDataList(arrList)
 				setShowMoreList(false)
 			}
-
-			console.log("123", arrList)
 		}
 	}, []);
 	useEffect(() => {
@@ -49,25 +45,15 @@ const CommentModule: PageComponent = props => {
 				item.hasCount = true;
 				let subsItem = commentBox.current.children[index].getElementsByClassName('subs-text');
 				item.subs.forEach((item2: any, index2: any) => {
-					console.log("123", subsItem[index2].offsetHeight, 2 * current.offsetHeight)
 					if (subsItem[index2].offsetHeight >= 2 * current.offsetHeight) {
-
 						item2.showMoreTexts = true;
 					} else {
 						item2.showMoreTexts = false;
 					}
 				})
-				//console.log("11", listItem.getElementsByClassName('subs-text'))
-
 				return item;
 			})
 			setDataList(dataList)
-			console.log("ddddataList", dataList)
-			// if (activeType == 'new') {
-			// 	setDynamicList(showList)
-			// } else {
-			// 	setHotList(showList)
-			// }
 		}
 
 	}, [oneLineHeight.current && oneLineHeight.current, dataList])
@@ -142,10 +128,6 @@ const CommentModule: PageComponent = props => {
 																		</div>
 																	}
 																</div>
-																{/* <div className="reply-user-give" onClick={giveLike}>
-																<span className="give-num">0</span>
-																<img className="article-img" src={require("./image/zan_hui@2x.png")} alt="" />
-															</div> */}
 															</div>
 															<div className="info-txt">
 																<div className="txt-sp subs-text" style={{ 'height': subItem.showMoreTexts ? msgHieght : 'auto', overflow: 'hidden' }}>{subItem.content}</div>

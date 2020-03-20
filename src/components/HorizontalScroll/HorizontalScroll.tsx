@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react'
 import '../../styles/swiper.min.css'
 import './scrollgoods.css'
 import Swiper from 'react-id-swiper'
-// import nutrition from '../../api/nutrition'
-import defaultImg from '../../assets/image/product-img.png'
 
 const ScrollGoodsModule: PageComponent = props => {
   // 横向滚动 swiper 配置
@@ -12,26 +10,11 @@ const ScrollGoodsModule: PageComponent = props => {
     spaceBetween: 30,
     freeMode: true,
   }
-  const [listHot, setListHot] = useState([]) //  热门食材列表
+  const [listHot, setListHot] = useState([])
   useEffect(() => {
-    // 热门食材列表
-    // nutrition.foodInfos.getproduct({foodKid: props.qurey}).then((data)=>{
-    //     console.log(' 热门食材列表 : ',data)
-    //     // setCookingHomeVOList(data)
-    //     setListHot(data)
-    // })
-
     if (props.dataList.length > 0) {
       setListHot(props.dataList)
-    } else {
-      // // 热门食材列表
-      // nutrition.foodInfos.listByHot().then(data => {
-      //   console.log('热门食材列表 - :', data)
-      //   setListHot(data)
-      // })
     }
-
-    console.log('滚动组件  - :', props.dataList)
   }, [])
   return (
     <div className="scrollgoods-wrap">
