@@ -91,3 +91,29 @@ export interface UserRole {
     /** 角色头衔 */
     roleTitle?: string
 }
+export interface OrderReceivingAddressVO {
+    /** 默认地址标识  0默认 1非默认 */
+    defaultFlag?: number
+    /** 分布式唯一ID */
+    kid?: number
+    /** 邮政编码 */
+    postCode?: string
+    /** 详细地址 */
+    receivingAddresDetail?: string
+    /** 收货地址市 */
+    receivingCity?: string
+    /** 收货地址市  回显 */
+    receivingCityText?: string
+    /** 收货地址区 */
+    receivingCounty?: string
+    /** 收货地址区  回显 */
+    receivingCountyText?: string
+    /** 收货人姓名 */
+    receivingName?: string
+    /** 收货人手机号 */
+    receivingPhone?: string
+    /** 收货地址省 */
+    receivingProvince?: string
+    /** 收货地址省  回显 */
+    receivingProvinceText?: string
+}

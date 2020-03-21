@@ -4,8 +4,6 @@
  * @overview 测试在浏览器中打开native App;
  *
  */
-import sharepage from "../api/sharepage";
-
 
 // UA鉴定
 var browser = {

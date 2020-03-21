@@ -31,9 +31,7 @@
     "react-transition-group": "^4.2.2",
     "source-map-explorer": "^2.0.1",
     "swiper": "^4.5.0",
-    "ts-node": "^7.0.1",
-    "urijs": "^1.19.2",
-    "weixin-js-sdk": "^1.4.0-test"
+    "ts-node": "^7.0.1"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.135",
