@@ -1,14 +1,5 @@
 import Loadable from 'react-loadable'
 import Loading from '../../components/Loading'
-// import DownloadAppDemo from './DownloadAppDemo'
-// import ContentSourceDemo from './ContentSourceDemo'
-// import AddressPickerDemo from './AddressPickerDemo'
-// import NavDemo from './NavDemo'
-// import MessageDemo from './MessageDemo'
-// import ScoreStarDemo from './ScoreStarDemo'
-// import CommentDemo from './CommentDemo'
-// import CommentOldDemo from './CommentOldDemo'
-// import HorizontalScrollDemo from './HorizontalScrollDemo'
 const DownloadAppDemo = Loadable({
     loader: () => import('./DownloadAppDemo'),
     loading: Loading,
@@ -45,9 +36,19 @@ const HorizontalScrollDemo = Loadable({
     loader: () => import('./HorizontalScrollDemo'),
     loading: Loading,
 })
+const ListDemo = Loadable({
+    loader: () => import('./ListDemo'),
+    loading: Loading,
+})
+
 const demoModule: Module = {
   name: 'demo',
   routes: [
+    {
+        name: 'demo列表',
+        path: '/',
+        component: ListDemo,
+    },
     {
       name: '打开Appdemo',
       path: '/openApp/demo',
@@ -80,19 +81,20 @@ const demoModule: Module = {
     },
     {
         name: '带回复评论组件',
-        path: '/Comment/demo',
+        path: '/comment/demo',
         component: CommentDemo,
     },
     {
         name: '不带回复评论组件',
-        path: '/Comment/demo',
+        path: '/commentOld/demo',
         component: CommentOldDemo,
     },
     {
         name: '横向滚动滑动组件',
-        path: '/HorizontalScroll/demo',
+        path: '/horizontalScroll/demo',
         component:HorizontalScrollDemo,
     },
+
   ],
 }
 export default demoModule

@@ -23,6 +23,7 @@
     width: 0.78rem;
     height: 0.78rem;
     align-items: center;
+    object-fit: contain;
   }
   & .leftName .appName {
     font-size: 0.3rem;

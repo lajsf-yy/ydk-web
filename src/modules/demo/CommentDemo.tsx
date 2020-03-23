@@ -1,3 +1,9 @@
+/*
+ * @Author: jiufu 
+ * @Date: 2020-03-22 18:47:38 
+ * @Last Modified by: mikey.jiufu
+ * @Last Modified time: 2020-03-22 20:28:32
+ */
 import React, { useState, useEffect, useCallback } from 'react'
 import './demo.css'
 import Comment from '../../components/Comment'
@@ -72,6 +78,7 @@ const DemoPage: PageComponent = props => {
 
     const [openAppParams,setOpenAppParams] = useState({})       //   打开app 指定页面 要传给app的参数
     const [downShowPop,setDownShowPop] = useState(false)        //   显示引导弹窗
+    
     const clickHandle = () => {
         const result = openApp(openAppParams)
         if (result) {
@@ -86,8 +93,6 @@ const DemoPage: PageComponent = props => {
           {
               commentList.length>0? <Comment dataList={commentList} openAppGive={clickHandle}/>: null
           }
-
-
       </div>
     )
 }

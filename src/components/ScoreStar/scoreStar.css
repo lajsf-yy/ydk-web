@@ -1,10 +1,24 @@
-/**
-*scoreStar
-*/
 .star-wrap {
+  flex-direction: row;
+  display:inline-flex;
   & img{
 		width: 0.26rem;
 		height: 0.24rem;
 		margin-right: 0.1rem;
 	}
+  & .small{
+		width: 0.2rem;
+		height: 0.17rem;
+		margin-right: 0.07rem;
+  }
+  & .large{
+		width: 0.32rem;
+		height: 0.29rem;
+		margin-right: 0.12rem;
+  }
+  & .middle{
+		width: 0.26rem;
+		height: 0.24rem;
+  }
+
 }

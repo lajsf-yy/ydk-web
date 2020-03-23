@@ -1,7 +1,19 @@
+/*
+ * @Author: mikey.jiufu 
+ * @Date: 2020-03-22 21:31:55 
+ * @Last Modified by:   mikey.jiufu 
+ * @Last Modified time: 2020-03-22 21:31:55 
+ */
 import React, { useState, useEffect } from 'react'
 import './comment.css'
 import avator from '../../assets/image/avatar.png'
 import { transformTime } from '../../utils/time'
+/**
+ *
+ * @param {openAppGive}    打开App的点击方法
+ * @param {dataList}       评论列表数据 
+ *  @returns
+ */
 const CommentModule: PageComponent = props => {
     const giveLike = () => {
         props.openAppGive()

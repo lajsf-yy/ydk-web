@@ -1,0 +1,20 @@
+#root{
+  padding-top: 0.28rem;
+
+
+}
+.demo-wrap{
+
+}
+.list{
+  font-size: 0.28rem;
+
+}
+.list .list-item-{
+  height: 0.82rem;
+  line-height: 0.82rem;
+  padding-left: 0.32rem;
+  border-bottom: 1px solid #f2f2f2;
+
+
+}

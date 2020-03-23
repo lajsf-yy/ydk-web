@@ -1,5 +1,11 @@
-/**
- * 处理图文并茂数据[{'image': ''}, {'text': ''}]
+/*
+ * 
+ * @Descption: 处理图文并茂数据[{'image': ''}, {'text': ''}]
+ * @Author: mikey.jiufu 
+ * @Date: 2020-03-22 21:30:22 
+ * @Last Modified by: mikey.jiufu
+ * @Last Modified time: 2020-03-22 21:30:59
+ * 
  */
 import React from 'react'
 import './content-source.css'
@@ -7,6 +13,11 @@ interface ContentSourceProps {
   sourceData: string
 }
 const controlImgWidth = 686
+/**
+ *
+ * @param {sourceData}    图文并茂字符串  
+ *  @returns
+ */
 const ContentSource: React.FC<ContentSourceProps> = ({ sourceData = '[]' }) => {
   let sourceDataArr = JSON.parse(sourceData)
   // 解析图片宽高，以展示图片真实宽高比

@@ -52,11 +52,38 @@ const DemoPage: PageComponent = props => {
             setDownShowPop(false)
         }
     }
+    // 右边按钮自定义样式
+    const rightBtnStyle = () => {
+        return {
+            background: 'blue',
+            color: "#666"
+        }
+    }
+    const footStyle = () => {
+        return {
+            background: "purple",
+            color: 'red'
+        }
+    }
+
     return (
       <div className="demo-wrap">
-          <Header openAppParam={openParam} handleData={showDownPopHandle} />
+          <Header
+              openAppParam={openParam}
+              handleData={showDownPopHandle}
+          />
+
+          {/*<Header*/}
+              {/*icon="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"*/}
+              {/*title="拾恋商城"*/}
+              {/*rightBtnStyle={rightBtnStyle()}*/}
+              {/*openAppParam={openParam}*/}
+              {/*handleData={showDownPopHandle}*/}
+          {/*/>*/}
+
           <DownPop isShow={downShowPop} callback={callback}> </DownPop>
           <Footer onClick={clickHandle}/>
+          {/*<Footer style={footStyle()} onClick={clickHandle}/>*/}
 
       </div>
     )

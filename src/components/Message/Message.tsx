@@ -1,3 +1,9 @@
+/*
+ * @Author: mikey.jiufu 
+ * @Date: 2020-03-22 21:06:59 
+ * @Last Modified by: mikey.jiufu
+ * @Last Modified time: 2020-03-22 22:02:02
+ */
 import React, { useEffect, useState } from 'react'
 import assets from 'assets'
 import './message.css'
@@ -86,6 +92,18 @@ interface Props {
   style?: any
   onAction?: () => void
 }
+/**
+ *
+ * @param {image}       处理的图
+ * @param {preset}      预先设置显示内容
+ * @param {title}       标题
+ * @param {content}     内容
+ * @param {actionTitle} 按钮文字
+ * @param {textColor}   文本颜色
+ * @param {onAction}    底部按钮事件    
+ * @param {style}       样式
+ *  @returns
+ */
 const Message: React.FC<Props> = ({
   image,
   preset,

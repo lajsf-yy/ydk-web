@@ -1,3 +1,9 @@
+/*
+ * @Author: mikey.jiufu 
+ * @Date: 2020-03-22 21:32:18 
+ * @Last Modified by:   mikey.jiufu 
+ * @Last Modified time: 2020-03-22 21:32:18 
+ */
 import React, { useState, useMemo, useCallback, useRef } from 'react'
 import countyData from './countyData.json'
 import { Icon } from 'antd-mobile'
@@ -33,7 +39,12 @@ const hotCityItems = hotCitys.map(cityLabel => {
   }
   console.error('城市数据有误', cityLabel)
 })
-
+/**
+ *
+ * @param {defaultValues}  默认已经选中的城市数据回传，数组 （可选参数）
+ * @param {onDismiss}      影藏组件方法   
+ *  @returns
+ */
 const AddressPicker: React.FC<AddressContainerProps> = ({ defaultValues = [], onDismiss, ...props }) => {
   const [selectItems, setSelectItems] = useState(() => {
     let currCountyData = totalCountyData
