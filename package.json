@@ -18,7 +18,7 @@
         "@types/urijs": "^1.19.4",
         "antd-mobile": "^2.2.14",
         "classnames": "^2.2.6",
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.21",
         "postcss-px2rem": "^0.3.0",
         "prop-types": "^15.7.2",
         "rc-switch": "^1.9.0",
